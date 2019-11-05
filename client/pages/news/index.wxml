@@ -1,0 +1,39 @@
+<view class="book-list-box" wx:if="{{isShow==1}}">
+  <!-- 左侧分类导航 -->
+  <scroll-view scroll-y="true" class="left">
+    <block wx:for="{{bookType}}" wx:key="{{item.id}}">
+      <view class="left-menu-item {{curTypeIndex==index ? 'selected' : ''}}" data-cataid="{{item.id}}" data-index="{{index}}" bindtap="changeType">
+        {{item.catalog}}
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- 右侧内容 -->
+  <scroll-view scroll-y="true" class="right" scroll-top="{{top}}">
+    <block wx:for="{{bookList}}" wx:key="{{index}}">
+      <view class="right-book-item">
+        <view class="right-book-item-top">
+          <image src="{{item.img}}" mode="aspectFit" class="book-item-img" />
+          <view class="book-item-title">{{item.title}}</view>
+          <view class="book-item-catalog">
+            分类：{{item.catalog}}
+          </view>
+          <view class="book-item-bytime">出版：{{item.bytime}}</view>
+          <view class="book-item-reading">
+            <image src="../../images/read.png" class="read-icon" mode="aspectFit" /> {{item.reading}}
+          </view>
+        </view>
+        <view class="book-tag-box">
+          <block wx:if="{{item.tagArr.length > 0&&idx<3}}" wx:for="{{item.tagArr}}" wx:for-item="tag" wx:for-index="idx" wx:key="{{idx}}">
+            <view class="tag-item">{{tag}}</view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class="book-empty-box" wx:if="{{isShow==2}}">
+  <image src="../../images/error.png" mode="aspectFit" class="error-img" />
+  <view>opps，好像出问题啦.....</view>
+</view>

@@ -1,0 +1,29 @@
+<view class='case-page'>
+  <view class="date_info_box">
+    历史上的这一天：
+    <text data-ishide="{{false}}" bindtap="isHidePicker">{{curday}}</text>
+  </view>
+  <view class='list-masonry'>
+    <view class='item-masonry' wx:for="{{list}}" wx:key="{{index}}">
+      <image src='../../images/1.jpg' mode='widthFix' wx:if="{{!item.pic}}"></image>
+      <image src='{{item.pic}}' mode='widthFix' wx:else></image>
+      <view class="item-title">{{item.des}}</view>
+      <view class="item-date">{{item.lunar}}</view>
+    </view>
+  </view>
+  <view class="picker-mask" catchtouchmove="catchtouchPickermove" hidden="{{hidePicker}}"></view>
+  <view class="date-picker-box" hidden="{{hidePicker}}">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 230px;" value="{{value}}" class="citybody" bindchange="bindChange">
+      <view class="cityheader">
+        <view class="city-cancel" data-ishide="{{true}}" bindtap="isHidePicker">取消</view>
+        <view class="city-true" bindtap="surePicker">确定</view>
+      </view>
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="{{index}}" style="line-height: 50px;text-align: center;font-size: 26rpx;">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" wx:key="{{index}}" style="line-height: 50px;text-align: center;font-size: 26rpx;">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>

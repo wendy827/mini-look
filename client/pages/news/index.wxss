@@ -1,0 +1,115 @@
+page {
+  background-color: #fff;
+  position: relative;
+}
+
+.book-list-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 24%;
+  background-color: #f6f6f6;
+}
+
+.right {
+  width: 76%;
+  background-color: #fff;
+}
+
+.left-menu-item {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #333;
+  font-size: 26rpx;
+}
+
+.left-menu-item.selected {
+  background-color: #fff;
+  color: #a38063;
+}
+
+.right-book-item {
+  width: 90%;
+  min-height: 300rpx;
+  margin: 26rpx auto;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
+.right-book-item:last-child {
+  border-bottom: none;
+}
+
+.book-item-img {
+  width: 160rpx;
+  height: 200rpx;
+  float: left;
+  margin-right: 16rpx;
+}
+
+.book-item-title {
+  color: #333;
+  font-size: 30rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-item-catalog, .book-item-bytime, .book-item-reading {
+  color: #666;
+  font-size: 26rpx;
+  margin-top: 18rpx;
+}
+
+.book-tag-box {
+  display: flex;
+  flex-direction: row;
+  clear: left;
+  padding-top: 32rpx;
+  font-size: 24rpx;
+  color: #ff4e20;
+}
+
+.book-tag-box .tag-item {
+  border: 1rpx solid #ff4e20;
+  padding: 8rpx 14rpx;
+  margin-left: 16rpx;
+  border-radius: 18rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.read-icon {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.book-empty-box {
+  width: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #666;
+  padding-top: 80rpx;
+  box-sizing: border-box;
+}
+
+.error-img {
+  width: 256rpx;
+  height: 256rpx;
+  margin-bottom: 20rpx;
+}

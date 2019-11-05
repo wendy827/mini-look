@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/news/index",
+    "pages/home/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#e5d8b0",
+    "navigationBarTitleText": "随便看看",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a38063",
+    "selectedColor": "#a38063",
+    "backgroundColor": "#e5d8b0",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/news/index",
+        "text": "图书",
+        "iconPath": "images/22-hamster.png",
+        "selectedIconPath": "images/22-hamster.png"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "text": "历史",
+        "iconPath": "images/19-horse.png",
+        "selectedIconPath": "images/19-horse.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
