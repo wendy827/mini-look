@@ -82,8 +82,8 @@ router.post('/uploadfile', (req, res, next) => {
 
 //传入配置好的scs.json文件，这里面主要放新浪云的accessKey和secretKey
 var scsConfig = new sinaCloud.Config({
-    accessKeyId: 'y310d5vVnImrbA8HxefD',
-    secretAccessKey: 'e9be72a16ae8efa5a9e43dbeb143954d562f3c07',
+    accessKeyId: 'accessKeyId',
+    secretAccessKey: 'secretAccessKey',
     sslEnabled: false
 });
 sinaCloud.config = scsConfig;
