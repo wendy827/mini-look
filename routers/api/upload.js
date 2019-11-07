@@ -120,7 +120,7 @@ router.post('/uploadimgs', uploadsCloud.single('file'), (req, res) => {
                     console.log(error);
                 } else {
                     //上传图片成功，将图片地址返回给前端
-                    let path = "http://sinacloud.net/wendy1/imgs/" + remoteFilename;
+                    let path = "新浪存储路径/" + remoteFilename;
                     res.json({
                         success: true,
                         msg: "上传成功",

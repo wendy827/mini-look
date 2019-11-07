@@ -12,7 +12,7 @@ router.post('/jokelist', (req, res) => {
         time: String(Date.now()).substr(0, 10),
         page: req.body.page,
         pagesize: req.body.pagesize,
-        key: "2bbe778646d54f634dc9af3e691ef548"
+        key: "你的key"
     });
 
     const queryUrl = 'http://v.juhe.cn/joke/content/list.php?' + queryData;
@@ -51,7 +51,7 @@ router.post('/jokelistnew', (req, res) => {
     const queryData = querystring.stringify({
         page: req.body.page,
         pagesize: req.body.pagesize,
-        key: "2bbe778646d54f634dc9af3e691ef548"
+        key: "你的key"
     });
 
     const queryUrl = 'http://v.juhe.cn/joke/content/text.php?' + queryData;
@@ -86,7 +86,7 @@ router.post('/jokelistnew', (req, res) => {
 /*随机获取笑话 */
 router.post('/jokelistrandom', (req, res) => {
     const queryData = querystring.stringify({
-        key: "2bbe778646d54f634dc9af3e691ef548"
+        key: "你的key"
     });
 
     const queryUrl = 'http://v.juhe.cn/joke/randJoke.php?' + queryData;
@@ -125,7 +125,7 @@ router.post('/jokelistrandom', (req, res) => {
  */
 router.post('/toutiao', (req, res) => {
     const queryData = querystring.stringify({
-        key: "3dfc889d50c7a9b663cc9081af6c253c",
+        key: "你的key",
         type: req.body.type
     });
 
@@ -163,7 +163,7 @@ router.post('/toutiao', (req, res) => {
  */
 router.get('/booktype', (req, res) => {
     const queryData = querystring.stringify({
-        key: "012a77f5adc629112a17717eca8f5a3a"
+        key: "你的key"
     });
 
     const queryUrl = 'http://apis.juhe.cn/goodbook/catalog?' + queryData;
@@ -200,7 +200,7 @@ router.get('/booktype', (req, res) => {
  */
 router.post('/booklist', (req, res) => {
     const queryData = querystring.stringify({
-        key: "012a77f5adc629112a17717eca8f5a3a",
+        key: "你的key",
         catalog_id: req.body.catalog_id,
         pn: req.body.pn,
         rn: req.body.rn
@@ -245,7 +245,7 @@ router.post('/booklist', (req, res) => {
  */
 router.post('/historyeventold', (req, res) => {
     const queryData = querystring.stringify({
-        key: "15cbc00645367562d25d5502eaf434c3",
+        key: "你的key",
         v: "1.0",
         month: req.body.month,
         day: req.body.day
@@ -287,7 +287,7 @@ router.post('/historyeventold', (req, res) => {
  */
 router.post('/historyevent', (req, res) => {
     const queryData = querystring.stringify({
-        key: "15cbc00645367562d25d5502eaf434c3",
+        key: "你的key",
         date: req.body.date
     });
 
@@ -327,7 +327,7 @@ router.post('/historyevent', (req, res) => {
  */
 router.post('/historydetail', (req, res) => {
     const queryData = querystring.stringify({
-        key: "15cbc00645367562d25d5502eaf434c3",
+        key: "你的key",
         e_id: req.body.e_id
     });
 

@@ -1,4 +1,4 @@
-const domain = "https://jokeapi.applinzi.com/";
+const domain = "你的新浪云地址";
 const interfaces = {
   "jokeList": domain + 'api/juhedata/jokelist',
   "jokeroudom": domain + 'api/juhedata/jokelistrandom',
